@@ -11,29 +11,26 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "CartItem")
+@Table(name = "cart_item")
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "productId")
+    @Column(name = "product_id")
     private Long productId;
 
-    @Column(name = "productName")
+    @Column(name = "product_name")
     private String productName;
-
-    @Column(name = "productIllustration")
-    private String productIllustration;
 
     @Column(name = "quantity")
     private Integer quantity;
 
     @Column(name = "price")
-    private Double price;
+    private Float price;
 
-    @Column(name = "priceToPay")
-    private Double priceToPay;
+    @Column(name = "price_to_pay")
+    private Float priceToPay;
 }
 

@@ -1,7 +1,7 @@
 package com.ms.cart.mapper;
 
-import com.ms.cart.dto.CartDTO;
-import com.ms.cart.models.Cart;
+import com.ms.cart.dto.CartItemDTO;
+import com.ms.cart.models.CartItem;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
@@ -11,9 +11,9 @@ import java.util.List;
 public interface ICartItemDTOMapper {
     ICartItemDTOMapper INSTANCE = Mappers.getMapper( ICartItemDTOMapper.class );
 
-    CartDTO cartToCartDTO(Cart cart);
-    Cart cartDTOToCart(CartDTO cartDTO);
-    List<CartDTO> cartListToCartDTOList(List<Cart> cartList);
-    List<Cart> cartDTOListToCartList(List<CartDTO> cartDTOList);
+    CartItemDTO cartItemToCartItemDTO(CartItem cartItem);
+    CartItem cartItemDTOToCartItem(CartItemDTO CartItemDTO);
+    List<CartItemDTO> cartItemListToCartItemDTOList(List<CartItem> CartItemList);
+    List<CartItem> cartItemDTOListToCartItemList(List<CartItemDTO> CartItemDTOList);
 
 }

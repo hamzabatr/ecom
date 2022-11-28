@@ -21,5 +21,5 @@ public class Cart {
     private Long id;
 
     @OneToMany(cascade = CascadeType.ALL)
-    private List<CartItem> productsInCart;
+    private List<CartItem> cartItems;
 }
