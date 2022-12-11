@@ -4,7 +4,9 @@ import com.ms.cart.dto.CartDTO;
 import com.ms.cart.mapper.ICartDTOMapper;
 import com.ms.cart.repositories.ICartRepository;
 import com.ms.cart.services.interfaces.ICartService;
+import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +15,9 @@ import org.springframework.web.server.ResponseStatusException;
 @Slf4j
 @Service
 public class CartServiceImpl implements ICartService {
+    @Autowired
     ICartRepository iCartRepository;
+    @Autowired
     ICartDTOMapper iCartDTOMapper;
 
     public CartServiceImpl(ICartRepository iCartRepository, ICartDTOMapper iCartDTOMapper) {

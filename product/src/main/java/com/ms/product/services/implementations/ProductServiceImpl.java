@@ -6,19 +6,24 @@ import com.ms.product.models.Product;
 import com.ms.product.repositories.IProductRepository;
 import com.ms.product.services.interfaces.IProductService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
 @Service
 public class ProductServiceImpl implements IProductService{
 
-    IProductRepository productRepository;
-    IProductDTOMapper productDTOMapper;
+    @Autowired
+    private final IProductRepository productRepository;
+
+    @Autowired
+    private final IProductDTOMapper productDTOMapper;
 
     public ProductServiceImpl(IProductRepository productRepository, IProductDTOMapper productDTOMapper) {
         this.productRepository = productRepository;

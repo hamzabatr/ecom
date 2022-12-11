@@ -2,7 +2,9 @@ package com.ms.product.controllers;
 
 import com.ms.product.dto.ProductDTO;
 import com.ms.product.services.interfaces.IProductService;
+import jakarta.annotation.security.RolesAllowed;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +14,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
-
     @Autowired
     IProductService productService;
 
