@@ -3,6 +3,7 @@ package com.ms.cart.mapper;
 import com.ms.cart.dto.CartDTO;
 import com.ms.cart.models.Cart;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 import org.mapstruct.factory.Mappers;
 
 import java.util.List;

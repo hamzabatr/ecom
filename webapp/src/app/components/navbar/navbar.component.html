@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+
+  <div class="navbar-left-side">
+    <mat-icon class="side-navbar-menu" [title]="'Menu'" (click)="toggleMenu()">{{setMenuIcon()}}</mat-icon>
+    <img src="assets/ecom-logo.png" alt="ecom-logo" [title]="'Acceuil Ecom'">
+  </div>
+
+  <div class="navbar-right-side">
+    <div class="navbar-buttons-group" [class.is-open]="isMenuOpen">
+      <a mat-button>Catégories</a>
+      <a mat-button>Nous contacter</a>
+      <a mat-button>A propos</a>
+    </div>
+    <mat-icon class="navbar-cart-icon" [title]="'Voir le panier'">shopping_cart</mat-icon>
+  </div>
+
+</mat-toolbar>
+

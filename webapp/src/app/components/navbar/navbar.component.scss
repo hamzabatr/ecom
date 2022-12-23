@@ -1,0 +1,46 @@
+$menuBreakPointPhone: 750px;
+$menuHeight: 50px;
+
+mat-toolbar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+
+  .navbar-left-side {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .side-navbar-menu {
+      cursor: pointer;
+      padding: 20px;
+    }
+
+    img {
+      width: 100px;
+      height: 50px;
+      cursor: pointer;
+      align-self: center;
+    }
+
+  }
+
+  .navbar-right-side {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    .navbar-buttons-group {
+      align-self: center;
+    }
+
+    .navbar-cart-icon {
+      padding: 20px;
+      cursor: pointer;
+    }
+
+  }
+
+}
