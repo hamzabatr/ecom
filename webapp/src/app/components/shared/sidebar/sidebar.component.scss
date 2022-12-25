@@ -1,0 +1,29 @@
+$menuBreakPointPhone: 750px;
+
+.top {
+  display: none;
+}
+
+@media (max-width: $menuBreakPointPhone) {
+  .top {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+
+    mat-icon {
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.menu-item {
+
+  button {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    width: 100%;
+    padding: 25px 15px 25px 15px;
+  }
+}

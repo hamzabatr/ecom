@@ -1,0 +1,23 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidebar mode='over'>
+    <app-sidebar (emitToggle)="sidebar.close()"></app-sidebar>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="content">
+      <div class="toolbar">
+        <mat-toolbar>
+          <div class="left-box">
+            <mat-icon (click)="sidebar.toggle()">menu</mat-icon>
+            <img src="assets/ecom-logo.png" alt="ecom-logo" [title]="'Acceuil Ecom'" [routerLink]="['/home']">
+          </div>
+          <div class="right-box">
+            <mat-icon [title]="'Voir le panier'">shopping_cart</mat-icon>
+          </div>
+        </mat-toolbar>
+      </div>
+      <div class="main">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
