@@ -14,7 +14,7 @@
     <name>cart</name>
     <description>cart</description>
     <properties>
-        <java.version>19</java.version>
+        <java.version>17</java.version>
         <org.apache.maven.plugins.version>3.8.1</org.apache.maven.plugins.version>
         <org.mapstruct.version>1.5.3.Final</org.mapstruct.version>
         <org.projectlombok.version>1.18.24</org.projectlombok.version>

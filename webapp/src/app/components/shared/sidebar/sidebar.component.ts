@@ -6,12 +6,11 @@ import {Component, EventEmitter, Output} from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  isSideBarOpen: boolean = false;
+  @Output() emitCloseSideBar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  @Output() emitToggle: EventEmitter<boolean> = new EventEmitter<boolean>();
-
-  toggleSideBar() : void {
-    this.emitToggle.emit(!this.isSideBarOpen);
+  closeSideBar() : void {
+    this.emitCloseSideBar.emit(true);
   }
 
 }
+

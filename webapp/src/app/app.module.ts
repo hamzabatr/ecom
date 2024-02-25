@@ -11,6 +11,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
+import {FormsModule} from "@angular/forms";
 
 const navbar_modules = [
   MatToolbarModule,
@@ -30,7 +31,8 @@ const navbar_modules = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    navbar_modules
+    navbar_modules,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

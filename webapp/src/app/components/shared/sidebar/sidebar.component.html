@@ -1,12 +1,12 @@
 <div class="navbar">
   <div class="top">
-    <mat-icon (click)="toggleSideBar()">close</mat-icon>
+    <mat-icon (click)="closeSideBar()">close</mat-icon>
   </div>
   <!--  <div class="user">-->
   <!---->
   <!--  </div>-->
   <div class="menu-item">
-    <button mat-button [routerLink]="['/home']" (click)="toggleSideBar()">
+    <button mat-button [routerLink]="['/home']" (click)="closeSideBar()">
       <mat-icon>home</mat-icon>
       <span>Accueil</span>
     </button>
