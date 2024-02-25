@@ -1,6 +1,7 @@
-package com.ms.cart.dto;
+package com.ms.cart.dto.body;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.ms.cart.dto.ItemDTO;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,11 +16,15 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class CartDTO {
-    private long id;
+public class CartBody {
+    @JsonProperty(required = true)
+    private long cartId;
+
+    @JsonProperty(required = true)
     private String userId;
+
+    @JsonProperty(required = true)
     private List<ItemDTO> items;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal reduction;
 }
